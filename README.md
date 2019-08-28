@@ -1,20 +1,20 @@
-# Re-str
-```lua
-&>
-re-str(
-   name: "Re-str"
-   version: "1.0"
-   releaseDate: "28.08.2019"
-)
 
-example(
-   Test: "hello"
-)
-<
-```
-
-Usage:
 ```csharp
-RestrFile restrFile = RestrFile.LoadFromFile("filePath");
-string name = restFile.RestrObjects["re-str"].Aliases["name"];
+#region WRITE FILE ---------------------------------
+RestrFile restrFile = new RestrFile();
+RestrObject user1 = new RestrObject("user1");
+user1.Aliases.Add("username", "Jack251");
+user1.Aliases.Add("xpLevel", "15");
+RestrObject user2 = new RestrObject("user2");
+user2.Aliases.Add("username", "Yayo");
+user2.Aliases.Add("xpLevel", "25");
+restrFile.RestrObjects.Add(user1.Name, user1);
+restrFile.RestrObjects.Add(user1.Name, user2);
+restrFile.Save("example.rs");
+#endregion
+
+#region READ FILE ---------------------------------
+RestrFile restr = RestrFile.LoadFromFile("filePath"); // or LoadFromURL
+string name = restr.RestrObjects["re-str"].Aliases["name"];
+#endregion
 ```

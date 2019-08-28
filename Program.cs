@@ -27,7 +27,7 @@ namespace Re_str
             user2.Aliases.Add("xpLevel", "25");
 
             restrFile.RestrObjects.Add(user1.Name, user1);
-            restrFile.RestrObjects.Add(user1.Name, user2);
+            restrFile.RestrObjects.Add(user2.Name, user2);
             restrFile.Save("example.rs");
             #endregion
             

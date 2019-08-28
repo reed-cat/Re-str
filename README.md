@@ -2,13 +2,13 @@
 ```lua
 &>
 re-str(
-	name: "Re-str"
-	version: "1.0"
-	releaseDate: "28.08.2019"
+   name: "Re-str"
+   version: "1.0"
+   releaseDate: "28.08.2019"
 )
 
 example(
-	Test: "hello"
+   Test: "hello"
 )
 <
 ```
